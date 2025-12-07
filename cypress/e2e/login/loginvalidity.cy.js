@@ -10,6 +10,17 @@ describe('Login Validity', () =>{
 
         //})
 
+
+        it.only("check it", ()=>{
+            cy.visit('/auth/login')
+            cy.get('button[type="submit"]').click();
+            cy.get('input[name="username"]')
+                .parents('.oxd-input-group')
+                .find('.oxd-input-field-error-message')
+                .should('have.text','Required')
+
+        })
+
         it('Validate Empty Field', ()=> {
 
          cy.visit('auth/login');
