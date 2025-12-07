@@ -107,7 +107,7 @@ describe('Login Validity', () =>{
             })
          })
 
-         it.only('Check Footer orangeHrm link', () =>{
+         it('Check Footer orangeHrm link', () =>{
 
             cy.visit('/auth/login')
             cy.get('p.orangehrm-copyright a').click()
